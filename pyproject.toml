@@ -1,0 +1,24 @@
+[project]
+name = "my-chef"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Zhipeng Lin", email = "zhipenglinpro@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "langchain-openai>=1.5.2",
+    "langchain-tavily>=0.2.18",
+    "langgraph-cli[inmem]>=0.4.31",
+    "notebook>=7.6.2",
+    "openai>=3.3.0",
+    "python-dotenv>=1.2.3",
+]
+
+[project.scripts]
+my-chef = "my_chef:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
